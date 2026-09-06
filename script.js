@@ -640,6 +640,7 @@ const pdfPalette={ink:[15,15,15],text:[51,51,51],muted:[117,117,117],paper:[242,
 let activePdfAssets={};
 function pdfRasterize(src,opaque=false,opacity=1){return new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>{const sourceWidth=Math.max(1,image.naturalWidth),sourceHeight=Math.max(1,image.naturalHeight);const scale=Math.max(2,Math.min(8,192/Math.min(sourceWidth,sourceHeight)));const canvas=document.createElement("canvas");canvas.width=Math.max(1,Math.round(sourceWidth*scale));canvas.height=Math.max(1,Math.round(sourceHeight*scale));const context=canvas.getContext("2d");context.imageSmoothingEnabled=true;context.imageSmoothingQuality="high";if(opaque){context.fillStyle="#fff";context.fillRect(0,0,canvas.width,canvas.height)}context.globalAlpha=opacity;context.drawImage(image,0,0,canvas.width,canvas.height);resolve({data:canvas.toDataURL(opaque?"image/jpeg":"image/png",.98),width:sourceWidth,height:sourceHeight,format:opaque?"JPEG":"PNG"})};image.onerror=reject;image.src=src})}
 async function pdfBinaryBase64(src){const bytes=new Uint8Array(await (await fetch(src)).arrayBuffer());let binary="";for(let i=0;i<bytes.length;i+=32768)binary+=String.fromCharCode(...bytes.subarray(i,i+32768));return btoa(binary)}
+const pdfTryRasterize=(...args)=>pdfRasterize(...args).catch(error=>{console.warn("Ativo opcional do PDF não carregado:",args[0],error);return null});
 function pdfSetColor(doc,color,fill=false){(fill?doc.setFillColor:doc.setTextColor).apply(doc,color)}
 function pdfGroupColors(index){return index===0?{accent:pdfPalette.warning,line:pdfPalette.warningLine}:index===1?{accent:pdfPalette.info,line:pdfPalette.infoLine}:{accent:pdfPalette.negative,line:pdfPalette.negativeLine}}
 function pdfImagePlacement(asset,x,y,width,height,mode="contain"){
@@ -654,11 +655,11 @@ function pdfAddImage(doc,asset,x,y,width,height,alias,mode="contain"){
 }
 function pdfBrand(doc){
   if(activePdfAssets.brandLogo){pdfAddImage(doc,activePdfAssets.brandLogo,5.3,5.3,32.8,13.1,"arvi-brand");return}
-  doc.setFillColor(55,55,55);doc.roundedRect(5.3,9,8,6,3,3,"F");doc.roundedRect(10.5,5.3,8,9.7,3,3,"F");doc.roundedRect(16.2,5.3,8,9.7,3,3,"F");doc.setFont("NotoSansJP","bold");doc.setFontSize(15);doc.setTextColor(55,55,55);doc.text("arvi",25.2,14.2);
+  doc.setFillColor(55,55,55);doc.roundedRect(5.3,9,8,6,3,3,"F");doc.roundedRect(10.5,5.3,8,9.7,3,3,"F");doc.roundedRect(16.2,5.3,8,9.7,3,3,"F");doc.setFont("helvetica","bold");doc.setFontSize(15);doc.setTextColor(55,55,55);doc.text("arvi",25.2,14.2);
 }
-function pdfFooter(doc,page,showLogos=false){if(showLogos){const logos=[["ufrgs",10.5,8.5],["design",24.4,10.7],["elab",39.6,8.2],["comAcesso",16.2,8.7]];let x=9.5;logos.forEach(([key,width,height])=>{const logo=activePdfAssets[key];if(logo){pdfAddImage(doc,logo,x,279-height,width,height,`footer-${key}`);x+=width+8.5}})}doc.setFont("NotoSansJP","normal");doc.setFontSize(8);pdfSetColor(doc,pdfPalette.muted);doc.text(String(page),199.7,289,{align:"right"})}
+function pdfFooter(doc,page,showLogos=false){if(showLogos){const logos=[["ufrgs",10.5,8.5],["design",24.4,10.7],["elab",39.6,8.2],["comAcesso",16.2,8.7]];let x=9.5;logos.forEach(([key,width,height])=>{const logo=activePdfAssets[key];if(logo){pdfAddImage(doc,logo,x,279-height,width,height,`footer-${key}`);x+=width+8.5}})}doc.setFont("helvetica","normal");doc.setFontSize(8);pdfSetColor(doc,pdfPalette.muted);doc.text(String(page),199.7,289,{align:"right"})}
 function pdfText(doc,text,x,y,width,size=9,color=pdfPalette.text,style="normal"){
-  doc.setFont("NotoSansJP",style);doc.setFontSize(size);pdfSetColor(doc,color);const lines=doc.splitTextToSize(String(text||""),width);doc.text(lines,x,y);return y+lines.length*size*.42;
+  doc.setFont("helvetica",style);doc.setFontSize(size);pdfSetColor(doc,color);const lines=doc.splitTextToSize(String(text||""),width);doc.text(lines,x,y);return y+lines.length*size*.42;
 }
 function pdfAnswerStyle(answer){
   if(answer==="Sim")return {bg:pdfPalette.positiveBg,color:pdfPalette.positive};
@@ -725,10 +726,10 @@ async function downloadReportPdf(){
   const safeName=documentName.normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-zA-Z0-9_-]+/g,"-").replace(/^-+|-+$/g,"").toLowerCase()||"analise-arvi";
   try{
     if(!window.jspdf?.jsPDF)throw new Error("Gerador de PDF indisponível");
-    const [brandLogo,brandMuted,ufrgs,elab,comAcesso,design,statusSuccess,statusError,statusInfo,statusEmpty,fontRegularBase64,fontBoldBase64]=await Promise.all([pdfRasterize("assets/final/brand.svg"),pdfRasterize("assets/final/brand.svg",false,.14),pdfRasterize("assets/final/logo-ufrgs.svg"),pdfRasterize("assets/final/logo-elab.svg"),pdfRasterize("assets/final/logo-com-acesso.svg"),pdfRasterize("assets/final/logo-design.png"),pdfRasterize("assets/final/status-success.svg"),pdfRasterize("assets/final/status-error.svg"),pdfRasterize("assets/final/status-info.svg"),pdfRasterize("assets/final/radio-inactive.svg"),pdfBinaryBase64("assets/fonts/NotoSansJP-Regular.ttf"),pdfBinaryBase64("assets/fonts/NotoSansJP-Bold.ttf")]);
+    const [brandLogo,brandMuted,ufrgs,elab,comAcesso,design,statusSuccess,statusError,statusInfo,statusEmpty]=await Promise.all([pdfTryRasterize("assets/final/brand.svg"),pdfTryRasterize("assets/final/brand.svg",false,.14),pdfTryRasterize("assets/final/logo-ufrgs.svg"),pdfTryRasterize("assets/final/logo-elab.svg"),pdfTryRasterize("assets/final/logo-com-acesso.svg"),pdfTryRasterize("assets/final/logo-design.png"),pdfTryRasterize("assets/final/status-success.svg"),pdfTryRasterize("assets/final/status-error.svg"),pdfTryRasterize("assets/final/status-info.svg"),pdfTryRasterize("assets/final/radio-inactive.svg")]);
     activePdfAssets={brandLogo,brandMuted,ufrgs,elab,comAcesso,design,status:{"Sim":statusSuccess,"Não":statusError,"Não sei ou Não se aplica":statusInfo,"Não respondida":statusEmpty}};
-    activePdfAssets.coverArt=await pdfRasterize("assets/report-cover-art.png");
-    const {jsPDF}=window.jspdf;const doc=new jsPDF({unit:"mm",format:"a4",orientation:"portrait",putOnlyUsedFonts:true,compress:true});doc.addFileToVFS("NotoSansJP-Regular.ttf",fontRegularBase64);doc.addFileToVFS("NotoSansJP-Bold.ttf",fontBoldBase64);doc.addFont("NotoSansJP-Regular.ttf","NotoSansJP","normal");doc.addFont("NotoSansJP-Bold.ttf","NotoSansJP","bold");doc.addFont("NotoSansJP-Regular.ttf","NotoSansJP","italic");let page=1;
+    activePdfAssets.coverArt=await pdfTryRasterize("assets/report-cover-art.png");
+    const {jsPDF}=window.jspdf;const doc=new jsPDF({unit:"mm",format:"a4",orientation:"portrait",putOnlyUsedFonts:true,compress:true});let page=1;
     pdfBrand(doc);doc.setFillColor(228,228,228);doc.rect(5.3,34.5,199.4,1.5,"F");
     const values=Object.fromEntries([...document.querySelectorAll(".tool-header-form input")].map(input=>[input.name,input.value.trim()]));const meta=[["Nome do documento",values.documento],["Responsável pela criação/avaliação",values.responsavel],["Órgão responsável",values.orgao],["Data",values.data],["Identificador do material",values.identificador]];
     meta.forEach(([label,value],i)=>{const y=45+i*17;pdfText(doc,label,5.3,y,199.4,8,pdfPalette.muted);pdfText(doc,value||"-",5.3,y+7,199.4,9,pdfPalette.ink)});
