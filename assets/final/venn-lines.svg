@@ -1,0 +1,57 @@
+<svg width="397" height="397" viewBox="0 0 397 397" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="Repeat group 1_inner" data-figma-trr="r3p111.58-0f">
+<path opacity="0.45" d="M198.244 32.415C259.017 32.4152 308.284 81.6818 308.284 142.455C308.284 203.228 259.017 252.495 198.244 252.495C137.471 252.495 88.2043 203.228 88.2041 142.455C88.2041 81.6817 137.471 32.415 198.244 32.415Z" fill="url(#pattern0_2314_13259)" stroke="#C6C0C0" stroke-width="1.11575" stroke-linejoin="bevel"/>
+</g>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(469.049 125.681) rotate(120)"/>
+<use xlink:href="#Repeat%20group%201_inner" transform="translate(125.681 469.049) rotate(-120)"/>
+<defs>
+<pattern id="pattern0_2314_13259" patternUnits="userSpaceOnUse" patternTransform="matrix(240.199 0 0 501.955 78.1441 16.966)" preserveAspectRatio="none" viewBox="0 0 312 652" width="1" height="1">
+<use xlink:href="#pattern0_2314_13259_inner" transform="translate(-312 0)"/>
+<g id="pattern0_2314_13259_inner">
+<g id="Repeat group 9_inner" data-figma-trr="l40p8-0f">
+<line x1="2" y1="8.74228e-08" x2="1.99999" y2="326" stroke="#C6C0C0" stroke-width="4"/>
+</g>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(8)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(16)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(24)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(32)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(40)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(48)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(56)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(64)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(72)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(80)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(88)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(96)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(104)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(112)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(120)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(128)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(136)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(144)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(152)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(160)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(168)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(176)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(184)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(192)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(200)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(208)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(216)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(224)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(232)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(240)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(248)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(256)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(264)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(272)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(280)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(288)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(296)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(304)"/>
+<use xlink:href="#Repeat%20group%209_inner" transform="translate(312)"/>
+</g>
+<use xlink:href="#pattern0_2314_13259_inner" transform="translate(-156 326)"/>
+<use xlink:href="#pattern0_2314_13259_inner" transform="translate(156 326)"/>
+</pattern></defs>
+</svg>
