@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>arvi — Início</title>
+  <link rel="stylesheet" href="styles.css?v=20260906-21">
+</head>
+<body>
+  <header class="topbar">
+    <span class="topbar-spacer" aria-hidden="true"></span>
+    <nav aria-label="Navegação principal">
+      <a class="toplink active" id="home-link" href="#inicio">Início</a>
+      <button class="toplink" id="tool-link" type="button">Ferramenta</button>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true">
+        <span class="art art-1"><i><img src="assets/hero-line-1.svg" alt=""></i></span>
+        <span class="art art-2"><i><img src="assets/hero-line-2.svg" alt=""></i></span>
+        <span class="art art-3"><i><img src="assets/hero-line-3.svg" alt=""></i></span>
+        <span class="art art-4"><i><img src="assets/hero-line-4.svg" alt=""></i></span>
+      </div>
+      <h1 id="hero-title" class="brand"><img src="assets/final/brand.svg" alt="arvi"></h1>
+      <div class="hero-caption">
+        <div class="brand-detail"><img src="assets/final/brand-colors.svg" alt="" aria-hidden="true"></div>
+        <p>Ferramenta para avaliação de materiais informativos de saúde</p>
+      </div>
+    </section>
+
+    <section class="surface">
+      <div class="app-shell">
+        <div class="tabs" role="tablist" aria-label="Conheça a arvi">
+          <button id="tab-about" class="tab active" role="tab" aria-selected="true" aria-controls="panel-about" data-tab="about">Conheça a ferramenta</button>
+          <button id="tab-how" class="tab" role="tab" aria-selected="false" aria-controls="panel-how" data-tab="how" tabindex="-1">Como usar a ferramenta</button>
+        </div>
+
+        <section id="panel-about" class="tabpanel active" role="tabpanel" aria-labelledby="tab-about">
+          <article class="card about-card">
+            <h2>O que é a ferramenta ARVI?</h2>
+            <div class="card-copy">
+              <p>A ARVI é uma ferramenta que ajuda você a avaliar materiais informativos de saúde. Ela foi criada tendo como base peças gráficas sobre PrEP e PEP: os remédios que previnem o HIV antes e depois de uma exposição.</p>
+              <p>A ARVI reúne três formas de olhar para o material:</p>
+              <ul>
+                <li>Linguagem Simples: o texto é fácil de encontrar, entender e usar.</li>
+                <li>Design da Informação: a forma, as cores e a estrutura ajudam a pessoa a entender a informação.</li>
+                <li>Linguagem Inclusiva: as palavras respeitam quem lê e não reforçam preconceito.</li>
+              </ul>
+              <p>Por isso a ARVI não avalia só se o material está bem organizado ou bem escrito. A ferramenta avalia forma, linguagem, conteúdo e inclusão juntos.</p>
+            </div>
+            <figure class="venn-figure" aria-label="Diagrama que reúne Linguagem Simples, Design da Informação e Linguagem Inclusiva com ARVI ao centro">
+              <img class="venn-complete" src="assets/final/figura-x.svg" alt="" aria-hidden="true">
+            </figure>
+          </article>
+          <div class="accordion-list" data-group="about"></div>
+        </section>
+
+        <section id="panel-how" class="tabpanel" role="tabpanel" aria-labelledby="tab-how" hidden>
+          <div class="intro"><h2>Siga o passo a passo abaixo</h2><p>Antes de começar, tenha o material em mãos, digital ou impresso.</p></div>
+          <div class="steps">
+            <article><b>1</b><div><h3>Acesse a ferramenta</h3><p>Ela está no canto superior do site ou você pode <button class="inline-tool-link" type="button">acessar por aqui</button>.</p></div></article>
+            <article><b>2</b><div><h3>Preencha os dados no topo</h3><p>Registre o que identifica o material: título, instituição responsável, formato e o que mais o cabeçalho pedir.</p></div></article>
+            <article><b>3</b><div><h3>Leia os 9 campos numerados</h3><ul><li>O número indica a ordem da avaliação.</li><li>Comece clicando no botão com a flecha do campo 1.</li></ul></div></article>
+            <article><b>4</b><div><h3>Leia a pergunta</h3><ul><li>Abaixo dela pode haver informações e um exemplo para ajudar.</li><li>Alguns campos são só explicativos e não têm pergunta.</li></ul></div></article>
+            <article><b>5</b><div><h3>Leia com atenção a seção “Como posso conferir se está certo?”</h3><ul><li>Essa seção mostra como verificar o que a pergunta avalia.</li><li>O jeito muda conforme o tema: algumas orientações valem para qualquer material, outras são só para o digital ou só para o impresso.</li></ul></div></article>
+            <article><b>6</b><div><h3>Responda e anote</h3><ul><li>Marque Sim, Não, Não sei ou Não se aplica.</li><li>No campo de anotações, registre problemas, justificativas, dúvidas ou decisões.</li><li>Repita nos 9 campos: suas respostas e anotações ficam salvas enquanto você navega, então nada se perde no caminho.</li></ul></div></article>
+            <article><b>7</b><div><h3>Reúna e exporte</h3><ul><li>Depois dos nove campos, você tem num só lugar as respostas, as anotações e o que observou.</li><li>No topo da ferramenta há dois botões: um exporta a avaliação em PDF, para guardar, compartilhar ou consultar depois; o outro limpa tudo quando for avaliar um material novo.</li></ul></div></article>
+          </div>
+        </section>
+
+        <footer>
+          <div class="institutional"><img src="assets/final/logo-ufrgs.svg" alt="UFRGS"><img src="assets/final/logo-design.png" alt="Design UFRGS"><img src="assets/final/logo-elab.svg" alt="e.lab"><img src="assets/final/logo-com-acesso.svg" alt="COM Acesso UFRGS"></div>
+          <div class="footer-credit"><p>Este site é o resultado do estudo de mestrado de</p><p>Vitor Artur Heisler dos Santos | vitorahds@gmail.com</p></div>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <main id="tool-page" hidden>
+    <section class="tool-hero" aria-labelledby="tool-title">
+      <img class="tool-hero-vector" src="assets/tool-hero-line.svg" alt="" aria-hidden="true">
+      <img class="detail-hero-vector" src="assets/detail-header-line.svg" alt="" aria-hidden="true">
+      <button class="tool-back" type="button" aria-label="Voltar" onclick="closeDetail(); return false;"><img src="assets/tool-back.svg" alt=""></button>
+      <h1 id="tool-title">Ferramenta</h1>
+      <div class="detail-hero-icon" aria-hidden="true"><img src="assets/detail-header-icon.svg" alt=""></div>
+      <div class="detail-hero-copy">
+        <h1>Quem vai ler? O que o material comunica?</h1>
+        <p>Em um primeiro momento, precisamos entender quem vai ler o material e quais informações a pessoa vai precisar para entender de forma correta.</p>
+      </div>
+      <div class="tool-header-form">
+        <div class="tool-form-column">
+          <label>Nome do documento<input type="text" name="documento"></label>
+          <label>Responsável pela criação/avaliação<input type="text" name="responsavel"></label>
+        </div>
+        <div class="tool-form-column">
+          <label>Órgão responsável<input type="text" name="orgao"></label>
+          <label>Data<input type="text" name="data"></label>
+        </div>
+        <div class="tool-form-column tool-actions-column">
+          <label>Identificador do material<input type="text" name="identificador"></label>
+          <div class="tool-actions"><button id="export-tool" class="pill primary" type="button">Exportar avaliação em PDF</button><button id="clear-tool" class="pill" type="button">Limpar tudo</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="tool-surface">
+      <div class="quadrants">
+        <section class="quadrant-group warning-group">
+          <h2>Quem vai ler? O que o material comunica?</h2>
+          <div class="quadrant-grid" data-cards="0,1,2"></div>
+        </section>
+        <section class="quadrant-group neutral-group">
+          <h2>Como é o material? Onde ele vai ficar?</h2>
+          <div class="quadrant-grid" data-cards="3,4,5"></div>
+        </section>
+        <section class="quadrant-group negative-group">
+          <h2>O material é simples e claro?</h2>
+          <div class="quadrant-grid" data-cards="6,7,8"></div>
+        </section>
+        <footer class="tool-footer">
+          <div class="institutional"><img src="assets/final/logo-ufrgs.svg" alt="UFRGS"><img src="assets/final/logo-design.png" alt="Design UFRGS"><img src="assets/final/logo-elab.svg" alt="e.lab"><img src="assets/final/logo-com-acesso.svg" alt="COM Acesso UFRGS"></div>
+          <div class="footer-credit"><p>Este site é o resultado do estudo de mestrado de</p><p>Vitor Artur Heisler dos Santos | vitorahds@gmail.com</p></div>
+        </footer>
+      </div>
+    </section>
+    <section id="detail-surface" class="detail-surface" hidden>
+      <div id="detail-content" class="detail-content"></div>
+      <footer class="tool-footer detail-footer">
+        <div class="institutional"><img src="assets/final/logo-ufrgs.svg" alt="UFRGS"><img src="assets/final/logo-design.png" alt="Design UFRGS"><img src="assets/final/logo-elab.svg" alt="e.lab"><img src="assets/final/logo-com-acesso.svg" alt="COM Acesso UFRGS"></div>
+        <div class="footer-credit"><p>Este site é o resultado do estudo de mestrado de</p><p>Vitor Artur Heisler dos Santos | vitorahds@gmail.com</p></div>
+      </footer>
+    </section>
+  </main>
+  <div id="notice" class="notice" role="status" aria-live="polite"></div>
+  <script src="assets/vendor/jspdf.umd.min.js"></script>
+  <script src="script.js?v=20260906-24"></script>
+</body>
+</html>
