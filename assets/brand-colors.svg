@@ -1,0 +1,30 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="330.4" height="39.8" viewBox="0 0 330.4 39.8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon">
+<g id="Asterisk 1" filter="url(#filter0_f_0_618)">
+<path d="M14.1125 10.9491C14.6034 10.5799 15.1733 10.4017 15.7391 10.4017C16.5906 10.4017 17.4309 10.8053 17.9717 11.5639C17.9733 11.5655 17.9747 11.5672 17.9761 11.569C17.9774 11.5707 17.9787 11.5725 17.98 11.5743L17.9818 11.5771C17.9831 11.5789 17.9844 11.5808 17.9856 11.5826L19.8993 14.3077L21.813 11.5826C21.8149 11.5796 21.8168 11.5773 21.8187 11.5748C21.8196 11.5736 21.8204 11.5724 21.8213 11.5711C22.7227 10.2997 24.4547 10.0196 25.6875 10.9476C26.9217 11.8756 27.1977 13.6699 26.3073 14.9512L26.3054 14.9544C26.3038 14.9571 26.3025 14.9592 26.3004 14.9613L24.3909 17.6879L27.4847 18.7308C28.938 19.2207 29.7367 20.8454 29.2638 22.3509C28.7911 23.8564 27.224 24.6838 25.7693 24.1954L22.6756 23.1568L22.6742 26.5283C22.6727 28.1114 21.4288 29.4 19.9007 29.4C18.3725 29.4 17.1286 28.1114 17.1272 26.5269L17.1245 23.1582L14.0307 24.1968C14.0294 24.1968 14.0279 24.1971 14.0264 24.1976C14.0245 24.1981 14.0225 24.1989 14.0209 24.1997C12.569 24.6824 11.0076 23.855 10.5361 22.3523C10.0646 20.8497 10.8578 19.2307 12.3042 18.7365C12.3055 18.7361 12.3067 18.7356 12.3079 18.7351L12.3129 18.7331L12.3153 18.7322L15.4077 17.6893L13.4981 14.9627C13.4974 14.9613 13.4964 14.9598 13.4954 14.9584C13.4943 14.957 13.4933 14.9555 13.4926 14.9541C12.6009 13.6727 12.8783 11.877 14.1125 10.9491Z" fill="#12407C"/>
+</g>
+<g id="Asterisk 2" filter="url(#filter1_f_0_618)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M45.238 19.9L41.4 22.1573L44.2288 27.1427L48.069 24.8894L48.0712 29.4H53.7288L53.731 24.8894L57.5712 27.1427L60.4 22.1573L56.562 19.9L60.4 17.6427L57.5712 12.6573L53.731 14.9106L53.7288 10.4H48.0712L48.069 14.9106L44.2288 12.6573L41.4 17.6427L45.238 19.9Z" fill="#9E1730"/>
+</g>
+<g id="Summertime Sadness" filter="url(#filter2_f_0_618)">
+<path d="M76.9 29.4C74.4147 29.4 72.4 27.2734 72.4 24.65C72.4 22.0266 74.4147 19.9 76.9 19.9C74.4147 19.9 72.4 17.7734 72.4 15.15C72.4 12.5266 74.4147 10.4 76.9 10.4C79.3853 10.4 81.4 12.5266 81.4 15.15C81.4 12.5266 83.4147 10.4 85.9 10.4C88.3853 10.4 90.4 12.5266 90.4 15.15C90.4 17.7734 88.3853 19.9 85.9 19.9C88.3853 19.9 90.4 22.0266 90.4 24.65C90.4 27.2734 88.3853 29.4 85.9 29.4C83.4147 29.4 81.4 27.2734 81.4 24.65C81.4 27.2734 79.3853 29.4 76.9 29.4Z" fill="#FFBC00"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_0_618" x="1.08898e-09" y="9.44742e-07" width="39.8" height="39.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="5.2" result="effect1_foregroundBlur_0_618"/>
+</filter>
+<filter id="filter1_f_0_618" x="31" y="0" width="39.8" height="39.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="5.2" result="effect1_foregroundBlur_0_618"/>
+</filter>
+<filter id="filter2_f_0_618" x="62" y="0" width="38.8" height="39.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="5.2" result="effect1_foregroundBlur_0_618"/>
+</filter>
+</defs>
+</svg>

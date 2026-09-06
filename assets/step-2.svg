@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="108" height="70" viewBox="0 0 108 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Mithosis" filter="url(#filter0_f_0_183)">
+<path d="M61.9049 57.0517C57.1422 54.4572 50.4109 54.3793 45.5891 56.8607C42.2585 58.5748 38.4883 59.5414 34.4948 59.5414C20.9668 59.5414 10 48.451 10 34.7707C10 21.09 20.9668 10 34.4948 10C38.6918 10 42.6422 11.0674 46.0951 12.9484C50.8578 15.5429 57.5891 15.6207 62.4105 13.1392C65.7415 11.4251 69.5117 10.4587 73.5051 10.4587C87.0333 10.4587 98 21.549 98 35.2293C98 48.91 87.0333 60 73.5051 60C69.3082 60 65.3578 58.9328 61.9049 57.0517Z" fill="#A4A4A4"/>
+</g>
+<defs>
+<filter id="filter0_f_0_183" x="0" y="0" width="108" height="70" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur_0_183"/>
+</filter>
+</defs>
+</svg>

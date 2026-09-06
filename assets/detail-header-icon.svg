@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="73.8" height="74.8" viewBox="0 0 73.8 74.8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Summertime Sadness" filter="url(#filter0_f_0_22)">
+<path d="M23.65 10.4C16.3322 10.4 10.4 16.4442 10.4 23.9C10.4 31.356 16.3322 37.4 23.65 37.4C16.3322 37.4 10.4 43.444 10.4 50.9C10.4 58.356 16.3322 64.4 23.65 64.4C30.9679 64.4 36.9 58.356 36.9 50.9C36.9 58.356 42.8321 64.4 50.15 64.4C57.4679 64.4 63.4 58.356 63.4 50.9C63.4 43.444 57.4679 37.4 50.15 37.4C57.4679 37.4 63.4 31.356 63.4 23.9C63.4 16.4442 57.4679 10.4 50.15 10.4C42.8321 10.4 36.9 16.4442 36.9 23.9C36.9 16.4442 30.9679 10.4 23.65 10.4Z" fill="#FFBC00"/>
+</g>
+<defs>
+<filter id="filter0_f_0_22" x="0" y="0" width="73.8" height="74.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="5.2" result="effect1_foregroundBlur_0_22"/>
+</filter>
+</defs>
+</svg>
