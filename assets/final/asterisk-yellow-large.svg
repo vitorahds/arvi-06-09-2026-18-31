@@ -1,0 +1,6 @@
+<svg width="75" height="75" viewBox="177.6 301.6 73.8 74.8" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g filter="url(#blur)">
+    <path d="M201.25 312C193.932 312 188 318.044 188 325.5C188 332.956 193.932 339 201.25 339C193.932 339 188 345.044 188 352.5C188 359.956 193.932 366 201.25 366C208.568 366 214.5 359.956 214.5 352.5C214.5 359.956 220.432 366 227.75 366C235.068 366 241 359.956 241 352.5C241 345.044 235.068 339 227.75 339C235.068 339 241 332.956 241 325.5C241 318.044 235.068 312 227.75 312C220.432 312 214.5 318.044 214.5 325.5C214.5 318.044 208.568 312 201.25 312Z" fill="#FFBC00"/>
+  </g>
+  <defs><filter id="blur" x="177.6" y="301.6" width="73.8" height="74.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="5.2" result="effect1_foregroundBlur"/></filter></defs>
+</svg>
