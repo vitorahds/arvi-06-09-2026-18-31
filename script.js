@@ -149,7 +149,12 @@ const finalDetailTabs=[
 
 finalDetailTabs[2].tabs[0].label="Informações iniciais";
 Object.assign(finalDetailTabs[1].tabs[0],{
-  lead:"Para verificar se um texto é simples, a ARVI reúne ferramentas que analisam diferentes aspectos da escrita. Elas ajudam a avaliar coesão, coerência, complexidade das frases, escolha das palavras e outros aspectos da simplificação textual em português brasileiro.",
+  lead:"Para verificar se um texto é simples, a ARVI reúne ferramentas que analisam diferentes aspectos da escrita.",
+  leadItems:[
+    "Para verificar se um texto é simples, a ARVI reúne ferramentas que analisam diferentes aspectos da escrita.",
+    {text:"Elas foram organizadas em dois grupos:",children:["ferramentas que avaliam o texto como um todo, como o Vidya Text, o Simpligo, o Coh-Metrix-Port e o ALT-Legibilidade;","ferramentas que verificam o vocabulário, como o CorPop e o MedSimples;"]},
+    "Juntas, essas ferramentas ajudam a avaliar coesão, coerência, complexidade das frases, escolha das palavras e outros aspectos da simplificação textual em português brasileiro."
+  ],
   sections:[{question:"As ferramentas indicam que o texto está simples de ler?",label:"Informação adicional",info:["Use palavras do dia a dia, exatas e sem duplo sentido; prefira as concretas, que criam imagem na cabeça de quem lê.","Escreva uma ideia por frase, na ordem sujeito-verbo-objeto, e fale com a pessoa usando ‘você’.","Use voz ativa e deixe claro quem faz o quê; corte palavra repetida, termo vago e clichê.","Mantenha as frases curtas, mas varie o tamanho para o texto não ficar duro."],toolsDigital:["Cole o texto na ferramenta de leiturabilidade que você preferir e veja se o resultado indica leitura fácil.","Peça para alguém do público ler e contar o que entendeu."],toolsPhysical:["Transcreva o texto na ferramenta de leiturabilidade que você preferir e veja se o resultado indica leitura fácil.","Peça para alguém do público ler e contar o que entendeu."]}]
 });
 finalDetailTabs[1].tabs[4].label="ALT-Legibilidade";
@@ -163,15 +168,29 @@ Object.assign(finalDetailTabs[1].tabs[1],{actionUrl:"http://vidyatext.nuvem.ufrg
 Object.assign(finalDetailTabs[1].tabs[2],{actionUrl:"http://fw.nilc.icmc.usp.br:23380/simpligo-ranking"});
 Object.assign(finalDetailTabs[1].tabs[3],{actionUrl:"http://fw.nilc.icmc.usp.br:23380/cohmetrixport"});
 Object.assign(finalDetailTabs[1].tabs[4],{actionUrl:"https://legibilidade.com/"});
-finalDetailTabs[1].tabs[1].interfaceAsset="assets/interface-vydia.png";
-finalDetailTabs[1].tabs[2].interfaceAsset="assets/interface-simpligo.png";
-finalDetailTabs[1].tabs[3].interfaceAsset="assets/final/cohmetrix-screen.png";
-finalDetailTabs[1].tabs[4].interfaceAsset="assets/final/alt-screen.png";
+finalDetailTabs[1].tabs[1].interfaceAsset="assets/final/interface-vidya.png";
+finalDetailTabs[1].tabs[2].interfaceAsset="assets/final/interface-simpligo-figma.png";
+finalDetailTabs[1].tabs[3].interfaceAsset="assets/final/interface-cohmetrix-figma.png";
+finalDetailTabs[1].tabs[4].interfaceAsset="assets/final/interface-alt-figma.png";
 Object.assign(finalDetailTabs[1].tabs[5].cards[0],{url:"https://www.ufrgs.br/textecc/porlexbras/corpop/ferramentas.php"});
 Object.assign(finalDetailTabs[1].tabs[5].cards[1],{url:"https://www.ufrgs.br/textecc/acessibilidade/page/cartilha/"});
 Object.assign(finalDetailTabs[2].tabs[0],{
   label:"Informações iniciais",
-  lead:"Antes de entender como ver se o material está legível, vamos entender tópicos que vão ser introduzidos depois."
+  lead:"Antes de entender como ver se o material está legível, vamos conhecer os tópicos que vão ser introduzidos depois.",
+  conceptColumns:[
+    {heading:"Partes do texto",intro:"Antes de olhar o material, vale conhecer as partes do texto. São elas que a pessoa lê, e quase todas as orientações a seguir falam de uma delas. Cada parte tem uma função diferente, e é a diferença entre elas que mostra à pessoa por onde começar e o que é mais importante.",groups:[
+      {title:"Título",text:"É a frase que abre o material ou uma parte dele. Ele diz do que trata o que vem logo em seguida. É a primeira coisa que a pessoa lê, então precisa deixar claro o assunto sem rodeio."},
+      {title:"Subtítulo",text:"É o título menor que abre cada trecho. Ele divide o material em partes e ajuda a pessoa a achar o que procura sem precisar ler tudo. Quem busca só um assunto vai direto ao cabeçalho certo."},
+      {title:"Corpo do texto",text:"O corpo do texto é o texto principal, escrito em parágrafos. É a maior parte do que a pessoa lê e onde a informação é explicada. Tudo o que os títulos e os subtítulos anunciam aparece aqui, com detalhe."},
+      {title:"Partes específicas de texto",mark:true},
+      {title:"Sigla",text:"Uma sigla é uma palavra formada pelas letras iniciais de um nome ou expressão. Exemplo: SUS significa Sistema Único de Saúde."},
+      {title:"Palavras-chave",text:"Palavras que são mais importantes dentro de uma frase."}
+    ]},
+    {heading:"Outros conceitos importantes",groups:[
+      {title:"Família tipográfica",text:"A fonte é o estilo usado para desenhar as letras, os números e os sinais de um texto. Na ferramenta chamamos letra para família tipográfica ou fonte.\nExemplos:\nArial, Times New Roman, Roboto e Plus Jakarta Sans."},
+      {title:"Peso da fonte",text:"O peso indica se as letras são mais finas ou mais grossas.\nExemplos:\nLight: letras mais finas;\nRegular: espessura comum;\nMedium: letras um pouco mais grossas;\nBold: letras em negrito."}
+    ]}
+  ]
 });
 finalDetailTabs[2].tabs[0].concepts[0]=finalDetailTabs[2].tabs[0].concepts[0].replace("Partes do texto |","Partes do texto|");
 finalDetailTabs[2].tabs[1].inlineLinks=[{label:"Google Fonts",url:"https://fonts.google.com/"},{label:"Typetester",url:"https://classic.typetester.org/"}];
@@ -203,19 +222,16 @@ finalDetailTabs[2].tabs[4].sections=[
 ];
 
 // Exemplos visuais e textuais correspondentes aos cartões do Figma.
-Object.assign(finalDetailTabs[2].tabs[1].sections[0],{exampleImage:"assets/final/font-styles-1.png",exampleAlt:"Comparação entre fontes sem serifa, com serifa, oblíqua e cursiva"});
-Object.assign(finalDetailTabs[2].tabs[1].sections[1],{exampleImage:"assets/final/font-styles-2.png",exampleAlt:"Comparação de letras e números parecidos em diferentes fontes"});
-Object.assign(finalDetailTabs[2].tabs[1].sections[2],{examples:["Certo|Teste o texto com o público","Errado|Teste o texto com o público"]});
-Object.assign(finalDetailTabs[2].tabs[1].sections[3],{examples:["Certo|Folder e folheto: pelo menos 12 pt (4,25 mm).\nCartaz: pelo menos 14,2 pt (5 mm).","Errado|Usar letras menores apenas para fazer todo o conteúdo caber."]});
-Object.assign(finalDetailTabs[2].tabs[2].sections[0],{examples:["Certo|O que é Linguagem Simples?\nLinguagem Simples é uma forma de comunicar pensando primeiro em quem vai ler.","Errado|O QUE É LINGUAGEM SIMPLES?\nLINGUAGEM SIMPLES É UMA FORMA DE COMUNICAR PENSANDO PRIMEIRO EM QUEM VAI LER."]});
-Object.assign(finalDetailTabs[2].tabs[2].sections[1],{exampleImage:"assets/final/spacing-example-1.png",exampleAlt:"Comparação entre espaçamento confortável e espaçamento inadequado"});
-Object.assign(finalDetailTabs[2].tabs[2].sections[2],{exampleImage:"assets/final/alignment-example.png",exampleAlt:"Comparação entre texto alinhado à esquerda e texto justificado ou girado"});
-Object.assign(finalDetailTabs[2].tabs[2].sections[3],{exampleImage:"assets/final/spacing-example-2.png",exampleAlt:"Exemplo de margens e espaços entre texto, bordas e imagens"});
-Object.assign(finalDetailTabs[2].tabs[3].sections[0],{exampleImage:"assets/final/contrast-example-1.png",exampleAlt:"Comparação entre combinação de cores com contraste bom e contraste ruim"});
-Object.assign(finalDetailTabs[2].tabs[3].sections[1],{examples:["Certo|A mesma cor identifica informações do mesmo tipo em todo o material.","Errado|A mesma cor muda de significado ou é usada sem um padrão."]});
-Object.assign(finalDetailTabs[2].tabs[3].sections[2],{examples:["Certo|✓ Disponível — a cor aparece junto com texto e símbolo.","Errado|A informação é indicada somente pela cor."]});
-Object.assign(finalDetailTabs[2].tabs[4].sections[0],{exampleImage:"assets/final/reading-height-1.png",exampleAlt:"Alturas recomendadas para leitura de cartazes por pessoas em pé ou sentadas"});
-Object.assign(finalDetailTabs[2].tabs[4].sections[1],{exampleImage:"assets/final/lighting-good.png",exampleAlt:"Comparação do mesmo cartaz com iluminação boa e iluminação ruim"});
+Object.assign(finalDetailTabs[2].tabs[1].sections[0],{fontExample:true});
+Object.assign(finalDetailTabs[2].tabs[1].sections[1],{exampleImages:["assets/final/legibility-similar-ilhabela-large.png","assets/final/legibility-similar-words.png"],exampleAlt:"Comparação de letras e números parecidos em diferentes fontes"});
+Object.assign(finalDetailTabs[2].tabs[1].sections[2],{emphasisExample:true});
+Object.assign(finalDetailTabs[2].tabs[2].sections[0],{capsExample:true});
+Object.assign(finalDetailTabs[2].tabs[2].sections[1],{spacingTextExample:true});
+Object.assign(finalDetailTabs[2].tabs[2].sections[2],{alignmentTextExample:true});
+Object.assign(finalDetailTabs[2].tabs[2].sections[3],{exampleImage:"assets/final/legibility-margins-figma.svg",exampleAlt:"Diagrama com margens de 10 milímetros e espaços de 6 milímetros entre texto, imagem e colunas"});
+Object.assign(finalDetailTabs[2].tabs[3].sections[0],{exampleImage:"assets/final/legibility-contrast-figma.svg",exampleAlt:"Comparação visual entre contraste bom, com razão 12,6 para 1, e contraste ruim, com razão 1,24 para 1"});
+Object.assign(finalDetailTabs[2].tabs[4].sections[0],{exampleImage:"assets/final/legibility-reading-height-figma.svg",exampleAlt:"Alturas recomendadas para leitura de cartazes por pessoas em pé ou em cadeira de rodas"});
+Object.assign(finalDetailTabs[2].tabs[4].sections[1],{exampleImage:"assets/final/legibility-lighting-figma.svg",exampleAlt:"Comparação do mesmo cartaz com iluminação boa e iluminação ruim"});
 
 Object.assign(finalDetailTabs[1].tabs[1],{paragraphs:[
   "Sobre a ferramenta",
@@ -413,13 +429,28 @@ function normalizeDetailControls(){
 }
 function detailSectionMarkup(section,sectionIndex){
   const prefix=`detail-${detailTab}-${detailVariant}-${sectionIndex}`;
-  return `<article class="detail-check"><div class="detail-column guidance"><h3>${section.question}</h3><p class="detail-label">${section.label}</p>${section.info?listMarkup(section.info):""}${section.image?`<img class="detail-example" src="${section.image}" alt="Exemplo visual do material analisado">`:""}${section.exampleNotes?listMarkup(section.exampleNotes):""}</div><div class="detail-column instruments"><h3>Como posso conferir se está certo?</h3><span class="detail-badge"><img src="assets/detail-general.svg" alt="" aria-hidden="true"><span>Geral</span></span>${listMarkup(section.tools)}</div><div class="detail-column response"><h3>Resposta</h3><fieldset><legend class="visually-hidden">Resposta para: ${section.question}</legend>${["Sim","Não","Não se aplica ou não sei"].map(value=>`<label><input type="radio" name="${prefix}-response" value="${value}"><span>${value}</span></label>`).join("")}</fieldset><h3>Anotações</h3><div class="textarea-wrap detail-textarea"><label class="visually-hidden" for="${prefix}-notes">Anotações: ${section.question}</label><textarea id="${prefix}-notes" name="${prefix}-notes" placeholder="Anotações" spellcheck="true" wrap="soft" autocomplete="off"></textarea><div class="textarea-scroll" role="scrollbar" aria-label="Rolar anotações" aria-controls="${prefix}-notes" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0%" tabindex="0" hidden><span></span></div><button class="textarea-clear" type="button" aria-label="Excluir anotações" hidden><img src="assets/textarea-close.svg" alt=""></button></div></div></article>`;
+  const annotatedExample=section.image&&section.exampleNotes?`<div class="detail-example-block"><p class="detail-label">Exemplo</p><div class="detail-example-frame"><img class="detail-example" src="${section.image}" alt="Exemplo visual do material analisado">${listMarkup(section.exampleNotes)}</div></div>`:"";
+  const simpleImage=section.image&&!section.exampleNotes?`<img class="detail-example" src="${section.image}" alt="Exemplo visual do material analisado">`:"";
+  return `<article class="detail-check"><div class="detail-column guidance"><h3>${section.question}</h3><p class="detail-label">${section.label}</p>${section.info?listMarkup(section.info):""}${annotatedExample||simpleImage}</div><div class="detail-column instruments"><h3>Como posso conferir se está certo?</h3><span class="detail-badge"><img src="assets/detail-general.svg" alt="" aria-hidden="true"><span>Geral</span></span>${listMarkup(section.tools)}</div><div class="detail-column response"><h3>Resposta</h3><fieldset><legend class="visually-hidden">Resposta para: ${section.question}</legend>${["Sim","Não","Não se aplica ou não sei"].map(value=>`<label><input type="radio" name="${prefix}-response" value="${value}"><span>${value}</span></label>`).join("")}</fieldset><h3>Anotações</h3><div class="textarea-wrap detail-textarea"><label class="visually-hidden" for="${prefix}-notes">Anotações: ${section.question}</label><textarea id="${prefix}-notes" name="${prefix}-notes" placeholder="Anotações" spellcheck="true" wrap="soft" autocomplete="off"></textarea><div class="textarea-scroll" role="scrollbar" aria-label="Rolar anotações" aria-controls="${prefix}-notes" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0%" tabindex="0" hidden><span></span></div><button class="textarea-clear" type="button" aria-label="Excluir anotações" hidden><img src="assets/textarea-close.svg" alt=""></button></div></div></article>`;
+}
+function exampleStatusMarkup(status){
+  const isRight=status==="Certo";
+  return `<span class="example-status ${isRight?"right":"wrong"}"><span class="example-status-icon" aria-hidden="true"><img src="assets/final/${isRight?"status-success.svg":"status-error.svg"}" alt=""></span><span>${status}</span></span>`;
 }
 function finalCheckMarkup(section,sectionIndex){
   const prefix=`detail-${detailTab}-final-${finalSubTab}-${sectionIndex}`;
-  const examples=section.examples?`<div class="final-examples">${section.examples.map(item=>{const [status,...copy]=item.split("|");let text=copy.join("|").replaceAll("\n","<br>");if(text.includes("Glossário"))text=text.replace("dispneia","<b>dispneia</b>");return `<div class="final-example ${status==="Certo"?"right":"wrong"}"><strong>${status}</strong><p>${text}</p></div>`}).join("")}</div>`:"";
+  const examples=section.examples?`<div class="final-examples">${section.examples.map(item=>{const [status,...copy]=item.split("|");let text=copy.join("|").replaceAll("\n","<br>");if(text.includes("Glossário"))text=text.replace("dispneia","<b>dispneia</b>");return `<div class="final-example ${status==="Certo"?"right":"wrong"}">${exampleStatusMarkup(status)}<p>${text}</p></div>`}).join("")}</div>`:"";
   const exampleImage=section.exampleImage?`<img class="detail-example final-detail-example" src="${section.exampleImage}" alt="${section.exampleAlt||"Exemplo visual da orientação"}">`:"";
-  const exampleBlock=examples||exampleImage?`<div class="final-example-block"><p class="detail-label">Exemplo</p>${examples}${exampleImage}</div>`:"";
+  const exampleImages=section.exampleImages?`<div class="final-detail-image-stack">${section.exampleImages.map(src=>`<img class="detail-example final-detail-example" src="${src}" alt="${section.exampleAlt||"Exemplo visual da orientação"}">`).join("")}</div>`:"";
+  const fontExample=section.fontExample?`<div class="font-style-example" aria-label="Comparação entre letras sem serifa, com serifa, oblíquas e cursivas"><p class="font-sans">Esta é uma fonte sem serifa</p><p class="font-serif">Esta é uma fonte com serifa</p><p class="font-oblique">Esta é uma fonte oblíqua</p><p class="font-cursive">Esta é uma fonte cursiva</p></div>`:"";
+  const plainLanguageText=`Linguagem Simples é uma forma de comunicar pensando primeiro em quem vai ler. Para isso, é preciso considerar o que a pessoa precisa saber, o que ela já conhece e onde vai usar a informação.`;
+  const extendedPlainLanguageText=`${plainLanguageText} Um texto em Linguagem Simples ajuda a pessoa a encontrar, entender e usar a informação. O mais importante é que o texto funcione para quem lê.`;
+  const emphasisExample=section.emphasisExample?`<div class="editable-example emphasis-example"><h4>Teste o texto com o público</h4><p>A etapa de teste com o público-alvo será uma oportunidade de <b>verificar</b> se o seu documento está com uma <b>linguagem simples</b>.</p></div>`:"";
+  const capsExample=section.capsExample?`<div class="editable-example comparison-text-example"><div class="example-column">${exampleStatusMarkup("Certo")}<h4>O que é Linguagem Simples?</h4><p>${plainLanguageText}</p></div><div class="example-column caps-wrong">${exampleStatusMarkup("Errado")}<h4>O QUE É LINGUAGEM SIMPLES?</h4><p>${plainLanguageText.toLocaleUpperCase("pt-BR")}</p></div></div>`:"";
+  const spacingTextExample=section.spacingTextExample?`<div class="editable-example comparison-text-example"><div class="example-column">${exampleStatusMarkup("Certo")}<h4>O que é Linguagem Simples?</h4><p>${plainLanguageText}</p></div><div class="example-column spacing-wrong">${exampleStatusMarkup("Errado")}<h4>O que é Linguagem Simples?</h4><p>${plainLanguageText}</p></div></div>`:"";
+  const alignmentTextExample=section.alignmentTextExample?`<div class="editable-example comparison-text-example alignment-example-text"><div class="example-column">${exampleStatusMarkup("Certo")}<p class="example-caption">O texto é alinhado à esquerda e está na horizontal.</p><h4>O que é Linguagem Simples?</h4><p>${extendedPlainLanguageText}</p></div><div class="example-column alignment-wrong">${exampleStatusMarkup("Errado")}<p class="example-caption">O texto é justificado e foi girado 5 graus.</p><div class="rotated-copy"><h4>O que é Linguagem Simples?</h4><p>${extendedPlainLanguageText}</p></div></div></div>`:"";
+  const exampleContent=examples||exampleImage||exampleImages||fontExample||emphasisExample||capsExample||spacingTextExample||alignmentTextExample;
+  const exampleBlock=exampleContent?`<div class="final-example-block"><p class="detail-label">Exemplo</p>${exampleContent}</div>`:"";
   const tool=(label,icon,items)=>`<div class="material-tool-group"><span class="detail-badge"><img src="assets/${icon}" alt="" aria-hidden="true"><span>${label}</span></span>${listMarkup(items)}</div>`;
   const links=section.links?`<div class="final-links">${section.links.map(link=>`<a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.label}</a>`).join("")}</div>`:"";
   return `<article class="detail-check"><div class="detail-column guidance"><h3>${section.question}</h3><p class="detail-label">${section.label}</p>${listMarkup(section.info||[])}${exampleBlock}</div><div class="detail-column instruments"><h3>Como posso conferir se está certo?</h3>${tool("No material digital","detail-digital.svg",section.toolsDigital||[])}${tool("No material físico","detail-physical.svg",section.toolsPhysical||[])}${links}</div><div class="detail-column response"><h3>Resposta</h3><fieldset><legend class="visually-hidden">Resposta para: ${section.question}</legend>${["Sim","Não","Não se aplica ou não sei"].map(value=>`<label><input type="radio" name="${prefix}-response" value="${value}"><span>${value}</span></label>`).join("")}</fieldset><h3>Anotações</h3><div class="textarea-wrap detail-textarea"><textarea id="${prefix}-notes" name="${prefix}-notes" placeholder="Anotações" aria-label="Anotações: ${section.question}"></textarea><div class="textarea-scroll" role="scrollbar" aria-label="Rolar anotações" aria-controls="${prefix}-notes" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0" hidden><span></span></div><button class="textarea-clear" type="button" aria-label="Excluir anotações" hidden><img src="assets/textarea-close.svg" alt=""></button></div></div></article>`;
@@ -477,7 +508,8 @@ function finalArticleMarkup(tab){
   if(tab.cards)return `<h2>${tab.heading}</h2><div class="final-tool-list">${tab.cards.map(card=>`<section class="final-tool-item"><div class="tool-model-head"><h2>${card.title}</h2><a class="final-access" href="${card.url}" target="_blank" rel="noopener noreferrer" aria-label="Acessar ${card.title}">Acessar</a></div><img class="final-mark" src="assets/card-mark-negative.svg" alt=""><ul>${card.text.split("\n").filter(Boolean).map(line=>`<li>${line}</li>`).join("")}</ul></section>`).join("")}</div>`;
   if(tab.action)return toolModelMarkup(tab);
   if(tab.label==="Orientações gerais")return `<h2>${tab.heading}</h2><ul class="reading-general-list"><li>Para verificar se um texto é simples, a ARVI reúne ferramentas que analisam diferentes aspectos da escrita.</li><li>Elas foram organizadas em dois grupos:<ul><li>ferramentas que avaliam o texto como um todo, como o Vidya Text, Simpligo, Coh-Metrix-Port e ALT-Legibilidade;</li><li>ferramentas que verificam o vocabulário, como o CorPop e o MedSimples;</li></ul></li><li>Juntas, essas ferramentas ajudam a avaliar coesão, coerência, complexidade das frases, escolha das palavras e outros aspectos da simplificação textual em português brasileiro.</li></ul>`;
-  const concepts=tab.concepts?`<div class="final-concepts">${tab.concepts.map(item=>{const [title,...text]=item.split("|");return `<article><h3>${title}</h3><p>${text.join("|").replaceAll("\n","<br>")}</p></article>`}).join("")}</div>`:"";
+  const conceptColumns=tab.conceptColumns?`<div class="final-concept-columns">${tab.conceptColumns.map(column=>`<article class="final-concept-column"><h3>${column.heading}</h3>${column.intro?`<p>${column.intro}</p>`:""}${column.groups.map(group=>`<section class="final-concept-group${group.mark?" concept-break":""}"><h4>${group.title}</h4>${group.text?`<p>${group.text.replaceAll("\n","<br>")}</p>`:""}</section>`).join("")}</article>`).join("")}</div>`:"";
+  const concepts=conceptColumns||(tab.concepts?`<div class="final-concepts">${tab.concepts.map(item=>{const [title,...text]=item.split("|");return `<article><h3>${title}</h3><p>${text.join("|").replaceAll("\n","<br>")}</p></article>`}).join("")}</div>`:"");
   const paragraphHeadings=["Sobre a ferramenta","Interface","Resultado da análise","Cores e destaques no texto","Cores das frases","O que merece mais atenção","Métrica para observar","Índices de leitura","Índices de 0 a 100","Índices de escolaridade","Limites da ferramenta"];
   const linkify=text=>text.replace(/https:\/\/legibilidade\.com\//g,'<a href="https://legibilidade.com/" target="_blank" rel="noopener noreferrer">https://legibilidade.com/</a>');
   const paragraphs=(tab.paragraphs||[]).map(p=>paragraphHeadings.includes(p)?`<h3>${p}</h3>`:`<p>${linkify(p).replaceAll("\n","<br>")}</p>`).join("");
@@ -488,7 +520,8 @@ function finalArticleMarkup(tab){
 function renderDetail(){
   if(detailTab>=6){
     const data=finalDetailTabs[detailTab-6];const tab=data.tabs[finalSubTab]||data.tabs[0];
-    detailContent.innerHTML=`<div class="detail-tabs final-detail-tabs" role="tablist" aria-label="${data.title}">${data.tabs.map((item,index)=>`<button type="button" role="tab" aria-selected="${index===finalSubTab}" class="${index===finalSubTab?"active":""}" data-final-tab="${index}">${item.label}</button>`).join("")}</div><div class="final-detail-body">${tab.sections?`<h2>${tab.heading}</h2><ul class="final-lead final-lead-list"><li>${tab.lead}</li></ul><img class="final-mark" src="assets/card-mark-negative.svg" alt="" aria-hidden="true">${tab.sections.map((section,index)=>finalCheckMarkup({...section,question:numberedQuestion(section.question,index)},index)).join("")}`:finalArticleMarkup(tab)}</div>`;
+    const finalLead=tab.leadItems?`<ul class="final-lead final-lead-list">${tab.leadItems.map(item=>typeof item==="string"?`<li>${item}</li>`:`<li>${item.text}<ul>${item.children.map(child=>`<li>${child}</li>`).join("")}</ul></li>`).join("")}</ul>`:`<ul class="final-lead final-lead-list"><li>${tab.lead}</li></ul>`;
+    detailContent.innerHTML=`<div class="detail-tabs final-detail-tabs" role="tablist" aria-label="${data.title}">${data.tabs.map((item,index)=>`<button type="button" role="tab" aria-selected="${index===finalSubTab}" class="${index===finalSubTab?"active":""}" data-final-tab="${index}">${item.label}</button>`).join("")}</div><div class="final-detail-body">${tab.sections?`<h2>${tab.heading}</h2>${finalLead}<img class="final-mark" src="assets/card-mark-negative.svg" alt="" aria-hidden="true">${tab.sections.map((section,index)=>finalCheckMarkup({...section,question:numberedQuestion(section.question,index)},index)).join("")}`:finalArticleMarkup(tab)}</div>`;
     normalizeDetailControls();
     detailContent.querySelectorAll("textarea,input[type=radio]").forEach(field=>{if(field.type==="radio"){const saved=detailState[field.name];field.checked=saved!==undefined&&saved===field.value}else{field.value=detailState[field.name]||"";updateTextareaState(field)}});return;
   }
@@ -515,7 +548,7 @@ function renderDetailWithoutMoving(){
   window.scrollTo(0,scrollPosition);
   root.style.scrollBehavior=previousScrollBehavior;
 }
-function openDetail(index){detailTab=index;detailVariant="general";finalSubTab=0;const materialGroup=index>=3&&index<6;const finalGroup=index>=6;toolPage.classList.add("detail-view");document.body.classList.add("detail-mode");toolPage.classList.toggle("material-detail-view",materialGroup);toolPage.classList.toggle("final-detail-view",finalGroup);document.querySelector(".detail-hero-copy h1").textContent=finalGroup?finalDetailTabs[index-6].title:materialGroup?"Como é o material? Onde ele vai ficar?":"Quem vai ler? O que o material comunica?";document.querySelector(".detail-hero-copy p").textContent=finalGroup?finalDetailTabs[index-6].subtitle:materialGroup?"Após saber mais sobre o leitor e o que vai ser informado, vamos refletir sobre como e onde vamos mostrar a informação.":"Em um primeiro momento, precisamos entender quem vai ler o material e quais informações a pessoa vai precisar para entender de forma correta.";document.querySelector(".detail-hero-vector").src=materialGroup?"assets/detail-header-line-blue.svg":finalGroup?"assets/detail-header-line-red.svg":"assets/detail-header-line.svg";document.querySelector(".detail-hero-icon img").src=materialGroup?"assets/final/asterisk-blue.svg":finalGroup?"assets/card-mark-negative.svg":"assets/final/asterisk-yellow.svg";homeLink.classList.remove("active");toolLink.classList.remove("active");homeLink.setAttribute("aria-current","false");toolLink.setAttribute("aria-current","false");overviewSurface.hidden=true;detailSurface.hidden=false;renderDetail();window.scrollTo({top:0,behavior:"smooth"})}
+function openDetail(index){detailTab=index;detailVariant="general";finalSubTab=0;const materialGroup=index>=3&&index<6;const finalGroup=index>=6;toolPage.classList.add("detail-view");document.body.classList.add("detail-mode");toolPage.classList.toggle("material-detail-view",materialGroup);toolPage.classList.toggle("final-detail-view",finalGroup);document.querySelector(".detail-hero-copy h1").textContent=finalGroup?finalDetailTabs[index-6].title:materialGroup?"Como é o material? Onde ele vai ficar?":"Quem vai ler? O que o material comunica?";document.querySelector(".detail-hero-copy p").textContent=finalGroup?finalDetailTabs[index-6].subtitle:materialGroup?"Após saber mais sobre o leitor e o que vai ser informado, vamos refletir sobre como e onde vamos mostrar a informação.":"Em um primeiro momento, precisamos entender quem vai ler o material e quais informações a pessoa vai precisar para entender de forma correta.";document.querySelector(".detail-hero-vector").src=materialGroup?"assets/detail-header-line-blue.svg":finalGroup?"assets/detail-header-line-red.svg":"assets/detail-header-line.svg";document.querySelector(".detail-hero-icon img").src=materialGroup?"assets/final/asterisk-blue.svg":finalGroup?"assets/card-mark-negative.svg":"assets/final/asterisk-yellow-large.svg";homeLink.classList.remove("active");toolLink.classList.remove("active");homeLink.setAttribute("aria-current","false");toolLink.setAttribute("aria-current","false");overviewSurface.hidden=true;detailSurface.hidden=false;renderDetail();window.scrollTo({top:0,behavior:"smooth"})}
 function closeDetail(){toolPage.classList.remove("detail-view");document.body.classList.remove("detail-mode");toolLink.classList.add("active");toolLink.setAttribute("aria-current","page");detailSurface.hidden=true;overviewSurface.hidden=false;try{saveDetailState();updateOverviewCounts()}catch(error){console.error("Não foi possível atualizar o resumo dos campos.",error)}window.scrollTo({top:0,behavior:"smooth"})}
 
 function renderToolCards(){
@@ -569,6 +602,8 @@ document.getElementById("clear-tool").addEventListener("click",()=>{
   updateOverviewCounts();
 });
 const escapeReportText=value=>String(value??"").replace(/[&<>"']/g,char=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[char]));
+const materialOptions=["Folheto","Folder","Cartaz"];
+const selectedMaterialValue=()=>materialOptions.includes(detailState["detail-3-general-0-response"])?detailState["detail-3-general-0-response"]:"Não informado";
 function reportChecksForQuadrant(index){
   const checks=[];
   const addSections=(sections,prefix,label)=>{
@@ -586,7 +621,7 @@ function reportChecksForQuadrant(index){
     const tab=materialDetailTabs[index-3];
     if(index===3){
       const answer=detailState["detail-3-general-0-response"]||"Não respondida";
-      checks.push({label:"Tipo de material",question:"Qual material você está avaliando?",answer:["Folheto","Folder","Cartaz"].includes(answer)?"Sim":answer,notes:detailState["detail-3-general-0-notes"]||"",material:answer});
+      checks.push({label:"Tipo de material",question:"Qual material você está avaliando?",answer:materialOptions.includes(answer)?"Sim":answer,notes:detailState["detail-3-general-0-notes"]||"",material:materialOptions.includes(answer)?answer:""});
     }else addSections(tab.sections,`detail-${index}-general`,tab.title);
   }else{
     finalDetailTabs[index-6].tabs.forEach((tab,tabIndex)=>addSections(tab.sections,`detail-${index}-final-${tabIndex}`,tab.label));
@@ -617,7 +652,7 @@ function buildPrintReport(){
   saveDetailState();
   document.getElementById("print-report")?.remove();
   const values=Object.fromEntries([...document.querySelectorAll(".tool-header-form input")].map(input=>[input.name,input.value.trim()]));
-  const selectedMaterial=["Folheto","Folder","Cartaz"].includes(detailState["detail-3-general-0-response"])?detailState["detail-3-general-0-response"]:"Não informado";
+  const selectedMaterial=selectedMaterialValue();
   const report=document.createElement("section");
   report.id="print-report";
   report.setAttribute("aria-label","Relatório da análise ARVI");
@@ -631,8 +666,8 @@ function buildPrintReport(){
   ];
   let page=1;
   const cover=`<section class="print-page print-cover">${reportBrand()}<div class="print-cover-content"><p>Ferramenta visual interativa para análise de materiais informativos de saúde</p><h1>Relatório da análise</h1><div class="print-meta">${meta.map(([label,value])=>`<div><span>${label}</span><strong>${escapeReportText(value||"Não informado")}</strong></div>`).join("")}</div></div><div class="print-cover-art" aria-hidden="true"></div><div class="print-cover-logos"><img src="assets/logo-ufrgs.svg" alt="UFRGS"><img src="assets/logo-com-acesso.svg" alt="COM Acesso UFRGS"></div>${reportFooter(page++)}</section>`;
-  const summaries=reportGroups.map((group,groupIndex)=>`<section class="print-page print-summary print-group-${groupIndex}">${reportBrand()}<h2>${group}</h2><div class="print-summary-list">${toolCards.slice(groupIndex*3,groupIndex*3+3).map((card,offset)=>{const index=groupIndex*3+offset;const checks=reportChecksForQuadrant(index);const mainNotes=document.getElementById(`notes-${index}`)?.value.trim()||"";return `<article class="print-summary-card"><h3>${escapeReportText(card.title)}</h3><p class="print-question">${escapeReportText(card.question)}</p><div class="print-note">${escapeReportText(mainNotes||"Nenhuma anotação.")}</div>${reportBadges(checks)}</article>`}).join("")}</div>${reportFooter(page++)}</section>`).join("");
-  const details=toolCards.map((card,index)=>{const checks=reportChecksForQuadrant(index);return `<section class="print-page print-detail print-group-${Math.floor(index/3)}">${reportBrand()}<p class="print-kicker">Quadrante ${index+1}</p><h2>${escapeReportText(card.title)}</h2><p class="print-detail-lead">${escapeReportText(card.question)}</p><div class="print-detail-list">${checks.length?checks.map((check,checkIndex)=>`<article class="print-detail-question"><div class="print-detail-heading"><span>${checkIndex+1}</span><div><small>${escapeReportText(check.label)}</small><h3>${escapeReportText(check.question)}</h3></div></div><div class="print-detail-answer print-answer-${reportAnswerTypes.find(type=>type.key===check.answer)?.className||"empty"}"><span>Resposta</span><strong>${escapeReportText(check.answer)}</strong></div><div class="print-detail-notes"><span>Anotações</span><p>${escapeReportText(check.notes||"Nenhuma anotação.")}</p></div></article>`).join(""):`<p class="print-empty">Este quadrante não possui perguntas de resposta.</p>`}</div>${reportFooter(page++)}</section>`}).join("");
+  const summaries=reportGroups.map((group,groupIndex)=>`<section class="print-page print-summary print-group-${groupIndex}">${reportBrand()}<h2>${group}</h2><div class="print-summary-list">${toolCards.slice(groupIndex*3,groupIndex*3+3).map((card,offset)=>{const index=groupIndex*3+offset;const checks=reportChecksForQuadrant(index);const mainNotes=document.getElementById(`notes-${index}`)?.value.trim()||"";const material=checks.find(check=>check.material)?.material;return `<article class="print-summary-card"><h3>${escapeReportText(card.title)}</h3><p class="print-question">${escapeReportText(card.question)}</p>${material?`<p class="print-material-choice"><span>Tipo selecionado</span><strong>${escapeReportText(material)}</strong></p>`:""}<div class="print-note">${escapeReportText(mainNotes||"Nenhuma anotação.")}</div>${reportBadges(checks)}</article>`}).join("")}</div>${reportFooter(page++)}</section>`).join("");
+  const details=toolCards.map((card,index)=>{const checks=reportChecksForQuadrant(index);return `<section class="print-page print-detail print-group-${Math.floor(index/3)}">${reportBrand()}<p class="print-kicker">Quadrante ${index+1}</p><h2>${escapeReportText(card.title)}</h2><p class="print-detail-lead">${escapeReportText(card.question)}</p><div class="print-detail-list">${checks.length?checks.map((check,checkIndex)=>`<article class="print-detail-question"><div class="print-detail-heading"><span>${checkIndex+1}</span><div><small>${escapeReportText(check.label)}</small><h3>${escapeReportText(check.question)}</h3></div></div><div class="print-detail-answer print-answer-${reportAnswerTypes.find(type=>type.key===check.answer)?.className||"empty"}"><span>${check.material?"Tipo selecionado":"Resposta"}</span><strong>${escapeReportText(check.material||check.answer)}</strong></div><div class="print-detail-notes"><span>Anotações</span><p>${escapeReportText(check.notes||"Nenhuma anotação.")}</p></div></article>`).join(""):`<p class="print-empty">Este quadrante não possui perguntas de resposta.</p>`}</div>${reportFooter(page++)}</section>`}).join("");
   report.innerHTML=cover+summaries+details;
   document.body.append(report);
 }
@@ -641,6 +676,8 @@ let activePdfAssets={};
 function pdfRasterize(src,opaque=false,opacity=1){return new Promise((resolve,reject)=>{const image=new Image();image.onload=()=>{const sourceWidth=Math.max(1,image.naturalWidth),sourceHeight=Math.max(1,image.naturalHeight);const scale=Math.max(2,Math.min(8,192/Math.min(sourceWidth,sourceHeight)));const canvas=document.createElement("canvas");canvas.width=Math.max(1,Math.round(sourceWidth*scale));canvas.height=Math.max(1,Math.round(sourceHeight*scale));const context=canvas.getContext("2d");context.imageSmoothingEnabled=true;context.imageSmoothingQuality="high";if(opaque){context.fillStyle="#fff";context.fillRect(0,0,canvas.width,canvas.height)}context.globalAlpha=opacity;context.drawImage(image,0,0,canvas.width,canvas.height);resolve({data:canvas.toDataURL(opaque?"image/jpeg":"image/png",.98),width:sourceWidth,height:sourceHeight,format:opaque?"JPEG":"PNG"})};image.onerror=reject;image.src=src})}
 async function pdfBinaryBase64(src){const bytes=new Uint8Array(await (await fetch(src)).arrayBuffer());let binary="";for(let i=0;i<bytes.length;i+=32768)binary+=String.fromCharCode(...bytes.subarray(i,i+32768));return btoa(binary)}
 const pdfTryRasterize=(...args)=>pdfRasterize(...args).catch(error=>{console.warn("Ativo opcional do PDF não carregado:",args[0],error);return null});
+async function pdfRasterizeTinted(src,color){const svg=await (await fetch(src)).text();const tinted=svg.replace(/fill="#505050"/gi,`fill="${color}"`);return pdfRasterize(`data:image/svg+xml;base64,${btoa(unescape(encodeURIComponent(tinted)))}`)}
+const pdfTryRasterizeTinted=(src,color)=>pdfRasterizeTinted(src,color).catch(error=>{console.warn("Ícone opcional do PDF não carregado:",src,error);return null});
 function pdfSetColor(doc,color,fill=false){(fill?doc.setFillColor:doc.setTextColor).apply(doc,color)}
 function pdfGroupColors(index){return index===0?{accent:pdfPalette.warning,line:pdfPalette.warningLine}:index===1?{accent:pdfPalette.info,line:pdfPalette.infoLine}:{accent:pdfPalette.negative,line:pdfPalette.negativeLine}}
 function pdfImagePlacement(asset,x,y,width,height,mode="contain"){
@@ -675,7 +712,12 @@ function pdfPageShell(doc,groupIndex,showBrand=true,neutralBackground=false){
 }
 function pdfBadgeRow(doc,checks,x,y,alias){
   const counts=reportCounts(checks),widths=[19.8,20.1,59.6,38.8];let cursor=x;
-  reportAnswerTypes.forEach((type,typeIndex)=>{const style=pdfAnswerStyle(type.key),icon=activePdfAssets.status?.[type.key],label=`(${counts[type.key]}) ${type.label}`;if(icon)pdfAddImage(doc,icon,cursor,y,4.2,4.2,`${alias}-${type.className}`);pdfText(doc,label,cursor+5.6,y+3.4,widths[typeIndex]-5.6,8.2,style.color);cursor+=widths[typeIndex]+2.8});
+  reportAnswerTypes.forEach((type,typeIndex)=>{const icon=activePdfAssets.status?.[type.key],label=`(${counts[type.key]}) ${type.label}`;if(icon)pdfAddImage(doc,icon,cursor,y,4.2,4.2,`${alias}-${type.className}`);pdfText(doc,label,cursor+5.6,y+3.4,widths[typeIndex]-5.6,8.2,pdfPalette.text);cursor+=widths[typeIndex]+2.8});
+}
+function pdfMaterialRow(doc,material,x,y,alias){
+  const valid=materialOptions.includes(material),style=valid?pdfAnswerStyle("Sim"):pdfAnswerStyle("Não respondida"),icon=activePdfAssets.status?.[valid?"Sim":"Não respondida"];
+  if(icon)pdfAddImage(doc,icon,x,y,4.2,4.2,`${alias}-material`);
+  pdfText(doc,valid?material:"Não informado",x+5.6,y+3.4,54,8.2,style.color,"bold");
 }
 function pdfSummaryPage(doc,groupIndex,page){
   doc.addPage();pdfPageShell(doc,groupIndex);const colors=pdfGroupColors(groupIndex);
@@ -684,7 +726,8 @@ function pdfSummaryPage(doc,groupIndex,page){
     const index=groupIndex*3+offset;const checks=reportChecksForQuadrant(index);const counts=reportCounts(checks);
     doc.setFillColor(238,238,238);doc.rect(14.1,y,181.8,.7,"F");
     pdfText(doc,`${index+1}. ${card.title}`,14.1,y+10,181.8,12,pdfPalette.muted,"bold");pdfText(doc,card.question,14.1,y+23,181.8,8,colors.accent);
-    pdfText(doc,"Resultado",14.1,y+35,181.8,8,pdfPalette.text);pdfBadgeRow(doc,checks,14.1,y+42,`summary-${groupIndex}-${offset}`);y+=groupIndex===2?66:63.1;
+    const material=checks.find(check=>check.material)?.material;
+    if(material){pdfText(doc,"Tipo selecionado",14.1,y+32,181.8,8,pdfPalette.text);pdfMaterialRow(doc,material,14.1,y+36,`summary-${groupIndex}-${offset}`);pdfText(doc,"Resultado",14.1,y+45,181.8,8,pdfPalette.text);pdfBadgeRow(doc,checks,14.1,y+49,`summary-${groupIndex}-${offset}`)}else{pdfText(doc,"Resultado",14.1,y+35,181.8,8,pdfPalette.text);pdfBadgeRow(doc,checks,14.1,y+42,`summary-${groupIndex}-${offset}`)}y+=groupIndex===2?66:63.1;
   });pdfFooter(doc,page);
 }
 function pdfDetailPage(doc,index,startPage){
@@ -711,7 +754,7 @@ function pdfDetailPage(doc,index,startPage){
     const finalBadgeY=y+18.8+(questionLines.length-1)*4.8;
     const finalNoteY=finalBadgeY+11.7;
     doc.setFillColor(...colors.line);doc.rect(14.1,y,181.8,.7,"F");pdfText(doc,questionText,14.1,y+9.9,181.8,10,pdfPalette.text,"bold");
-    pdfBadgeRow(doc,[check],14.1,finalBadgeY,`detail-${index}-${checkIndex}`);
+    if(check.material)pdfMaterialRow(doc,check.material,14.1,finalBadgeY,`detail-${index}-${checkIndex}`);else pdfBadgeRow(doc,[check],14.1,finalBadgeY,`detail-${index}-${checkIndex}`);
     doc.setFillColor(242,242,242);doc.roundedRect(14.1,finalNoteY,181.8,noteHeight,2.8,2.8,"F");pdfText(doc,noteText,16.9,finalNoteY+5.9,176.2,8,pdfPalette.text);
     y=finalNoteY+noteHeight+8.5;
   });pdfFooter(doc,page);return page;
@@ -726,13 +769,13 @@ async function downloadReportPdf(){
   const safeName=documentName.normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-zA-Z0-9_-]+/g,"-").replace(/^-+|-+$/g,"").toLowerCase()||"analise-arvi";
   try{
     if(!window.jspdf?.jsPDF)throw new Error("Gerador de PDF indisponível");
-    const [brandLogo,brandMuted,ufrgs,elab,comAcesso,design,statusSuccess,statusError,statusInfo,statusEmpty]=await Promise.all([pdfTryRasterize("assets/final/brand.svg"),pdfTryRasterize("assets/final/brand.svg",false,.14),pdfTryRasterize("assets/final/logo-ufrgs.svg"),pdfTryRasterize("assets/final/logo-elab.svg"),pdfTryRasterize("assets/final/logo-com-acesso.svg"),pdfTryRasterize("assets/final/logo-design.png"),pdfTryRasterize("assets/final/status-success.svg"),pdfTryRasterize("assets/final/status-error.svg"),pdfTryRasterize("assets/final/status-info.svg"),pdfTryRasterize("assets/final/radio-inactive.svg")]);
+    const [brandLogo,brandMuted,ufrgs,elab,comAcesso,design,statusSuccess,statusError,statusInfo,statusEmpty]=await Promise.all([pdfTryRasterize("assets/final/brand.svg"),pdfTryRasterize("assets/final/brand.svg",false,.14),pdfTryRasterize("assets/final/logo-ufrgs.svg"),pdfTryRasterize("assets/final/logo-elab.svg"),pdfTryRasterize("assets/final/logo-com-acesso.svg"),pdfTryRasterize("assets/final/logo-design.png"),pdfTryRasterizeTinted("assets/final/status-success.svg","#156f33"),pdfTryRasterizeTinted("assets/final/status-error.svg","#9e1730"),pdfTryRasterizeTinted("assets/final/status-info.svg","#174f9e"),pdfTryRasterizeTinted("assets/final/radio-inactive.svg","#505050")]);
     activePdfAssets={brandLogo,brandMuted,ufrgs,elab,comAcesso,design,status:{"Sim":statusSuccess,"Não":statusError,"Não sei ou Não se aplica":statusInfo,"Não respondida":statusEmpty}};
     activePdfAssets.coverArt=await pdfTryRasterize("assets/report-cover-art.png");
     const {jsPDF}=window.jspdf;const doc=new jsPDF({unit:"mm",format:"a4",orientation:"portrait",putOnlyUsedFonts:true,compress:true});let page=1;
     pdfBrand(doc);doc.setFillColor(228,228,228);doc.rect(5.3,34.5,199.4,1.5,"F");
-    const values=Object.fromEntries([...document.querySelectorAll(".tool-header-form input")].map(input=>[input.name,input.value.trim()]));const meta=[["Nome do documento",values.documento],["Responsável pela criação/avaliação",values.responsavel],["Órgão responsável",values.orgao],["Data",values.data],["Identificador do material",values.identificador]];
-    meta.forEach(([label,value],i)=>{const y=45+i*17;pdfText(doc,label,5.3,y,199.4,8,pdfPalette.muted);pdfText(doc,value||"-",5.3,y+7,199.4,9,pdfPalette.ink)});
+    const values=Object.fromEntries([...document.querySelectorAll(".tool-header-form input")].map(input=>[input.name,input.value.trim()]));const meta=[["Nome do documento",values.documento],["Responsável pela criação/avaliação",values.responsavel],["Órgão responsável",values.orgao],["Data",values.data],["Identificador do material",values.identificador],["Tipo de material",selectedMaterialValue()]];
+    meta.forEach(([label,value],i)=>{const y=45+i*14.5;pdfText(doc,label,5.3,y,199.4,8,pdfPalette.muted);pdfText(doc,value||"-",5.3,y+6,199.4,9,pdfPalette.ink)});
     doc.setFillColor(...pdfPalette.paper);doc.roundedRect(5.3,126,199.4,131.9,5,5,"F");pdfAddImage(doc,activePdfAssets.coverArt,5.3,126,199.4,131.9,"cover-art");pdfFooter(doc,page,true);
     reportGroups.forEach((_,groupIndex)=>pdfSummaryPage(doc,groupIndex,++page));
     toolCards.forEach((_,index)=>{page=pdfDetailPage(doc,index,page+1)});
@@ -748,15 +791,18 @@ async function downloadReportPdf(){
 }
 document.getElementById("export-tool").addEventListener("click",downloadReportPdf);
 function updateTextareaState(textarea){
+  if(!textarea)return;
   const wrapper=textarea.parentElement;
   const clear=wrapper.querySelector(".textarea-clear");
   const scroll=wrapper.querySelector(".textarea-scroll");
-  const thumb=scroll.firstElementChild;
   const filled=textarea.value.length>0;
   const overflowing=textarea.scrollHeight>textarea.clientHeight+1;
   const active=wrapper.contains(document.activeElement);
   wrapper.classList.toggle("filled",filled);wrapper.classList.toggle("active",active);
-  clear.hidden=!filled||!active;scroll.hidden=!overflowing||!active;
+  if(clear)clear.hidden=!filled||!active;
+  if(!scroll)return;
+  const thumb=scroll.firstElementChild;
+  scroll.hidden=!overflowing||!active;
   if(overflowing){
     const trackHeight=scroll.clientHeight;
     const thumbHeight=Math.max(50,trackHeight*(textarea.clientHeight/textarea.scrollHeight));
